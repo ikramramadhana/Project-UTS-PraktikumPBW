@@ -1,0 +1,168 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f7edd0, #f8d2df);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Bubble Animasi */
+.bubble, .bubble2, .bubble3, .bubble4, .bubble5 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Bubble 1 (Kanan ke Kiri) */
+.bubble {
+  width: 120px;
+  height: 120px;
+  background-color: #ce6783;
+  top: 20%;
+  left: 100%;
+  animation: floatLeft 18s linear infinite;
+}
+
+/* Bubble 2 (Kanan ke Kiri) */
+.bubble2 {
+  width: 80px;
+  height: 80px;
+  background-color: #fddde6;
+  top: 70%;
+  left: 100%;
+  animation: floatLeft 24s linear infinite;
+}
+
+/* Bubble 3 (Kanan ke Kiri) */
+.bubble3 {
+  width: 100px;
+  height: 100px;
+  background-color: #fbf6e3;
+  top: 40%;
+  left: 100%;
+  animation: floatLeft 20s linear infinite;
+}
+
+/* Bubble 4 (Kiri ke Kanan) */
+.bubble4 {
+  width: 60px;
+  height: 60px;
+  background-color: #715252ce;
+  top: 10%;
+  left: -150px;
+  animation: floatRight 28s linear infinite;
+}
+
+/* Bubble 5 (Kiri ke Kanan) */
+.bubble5 {
+  width: 140px;
+  height: 140px;
+  background-color: #d8b2da;
+  top: 85%;
+  left: -150px;
+  animation: floatRight 16s linear infinite;
+}
+
+/* Animasi Bubble Kanan ke Kiri */
+@keyframes floatLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-150vw);
+    opacity: 0;
+  }
+}
+
+/* Animasi Bubble Kiri ke Kanan */
+@keyframes floatRight {
+  0% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(150vw);
+    opacity: 0;
+  }
+}
+
+/* Register Container */
+.container {
+  background: #fffaf0;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  color: #e47191;
+  margin-bottom: 30px;
+}
+
+h5 {
+  text-align: center;
+  color: #8a7f83;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e8b7c1;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #fffdf6;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #e47191;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #d15878;
+}
+
+.message {
+  color: red;
+  text-align: center;
+}
+
+.link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #e47191;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
